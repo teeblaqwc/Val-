@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine 💖</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+  }
+  .card {
+    background: rgba(255,255,255,0.15);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  button {
+    font-size: 20px;
+    padding: 15px 35px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  #yes {
+    background-color: #4CAF50;
+    color: white;
+  }
+  #no {
+    background-color: #f44336;
+    color: white;
+    position: absolute;
+  }
+</style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Hey Beautiful 💕</h1>
+    <p>Ayoola has something special to ask you 😌</p>
+    <h1>Will you be my Valentine? 💖</h1>
+    <button id="yes" onclick="yesClicked()">YES 💘</button>
+    <button id="no" onmouseover="moveNo()">NO 💔</button>
+  </div>
+
+<script>
+function yesClicked() {
+  document.body.innerHTML = `
+    <div style="text-align:center;">
+      <h1>You just made me the happiest person 😍💐</h1>
+      <p>Happy Valentine’s Day ❤️</p>
+      <p>Send me a message and say YES 😌</p>
+    </div>
+  `;
+}
+
+function moveNo() {
+  const noBtn = document.getElementById("no");
+  noBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+  noBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+}
+</script>
+</body>
+</html>
